@@ -1,0 +1,10 @@
+[user]
+	name = ShivamBh
+	email = shivam.bhattacharjee94@gmail.com
+	signingkey = 090AA17C67F97EBB
+[init]
+	defaultBranch = master
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
