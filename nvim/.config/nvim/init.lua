@@ -109,6 +109,7 @@ vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+vim.opt.laststatus = 3
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -1020,6 +1021,11 @@ require('lazy').setup({
 
 vim.keymap.set('n', '<leader>b', ':Neotree toggle<CR>', {
   desc = 'Open Neotree',
+})
+vim.keymap.set('n', '<leader>e', function()
+  vim.diagnostic.open_float()
+end, {
+  desc = 'Show Error Message',
 })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
